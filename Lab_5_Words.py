@@ -88,7 +88,7 @@ def CompareC(H,word0,word1):
 #print(StringToDec('and'))
 #print(MagnitudeC('and'))
 
-print(CompareC(H,"and","the"))
+print(CompareC(H,"and","and"))
 
 #decValOfW0 = StringToDec("and")
 #print(decValOfW0)

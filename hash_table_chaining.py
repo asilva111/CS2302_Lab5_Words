@@ -6,7 +6,6 @@ class HashTableC(object):
     # Constructor
     def __init__(self,size):  
         self.item = []
-        list2 = []
         for i in range(size):
             self.item.append([])
         
@@ -26,7 +25,13 @@ def FindC(H,k):
     #Returns the numpy array of k
     b = k%len(H.item)
 #    print(b)
-    return H.item[b][0][1]
+    for i in range(len(H.item[b])):
+        if H.item[b][i][0] == k:
+            return H.item[b][i][1]
+    else:
+        return -1
+
+
  
 def DeleteC(H,k):
     # Returns k from appropriate list
