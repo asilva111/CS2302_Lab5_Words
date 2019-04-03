@@ -9,13 +9,15 @@ class BST(object):
         self.left = left 
         self.right = right      
         
-def Insert(T,newItem):
+def Insert(T,tempList):
+    stringVal = StringToDec(tempList[0])
+    
     if T == None:
-        T =  BST(newItem)
-    elif T.item > newItem:
-        T.left = Insert(T.left,newItem)
+        T =  BST(tempList)
+    elif StringToDec(T.item[0]) > stringVal:
+        T.left = Insert(T.left,tempList)
     else:
-        T.right = Insert(T.right,newItem)
+        T.right = Insert(T.right,tempList)
     return T
 
 def Delete(T,del_item):
@@ -86,6 +88,13 @@ def FindAndPrint(T,k):
         print(f.item,'found')
     else:
         print(k,'not found')
+        
+        
+def StringToDec(word):
+    value = 0
+    for i in range(len(word)):
+        value += ord(word[i]) * (26**i) #Add up all the ascii values of each character + 26^index - for a unique value
+    return value
     
 # Code to test the functions above
 #T = None
