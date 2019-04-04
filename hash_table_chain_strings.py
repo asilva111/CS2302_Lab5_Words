@@ -9,7 +9,7 @@ class HashTableC(object):
         for i in range(size):
             self.item.append([])
         
-        self.num_size = 0
+        self.num_size = 0 
         
 def InsertC(H,k,l):
     # Inserts k in appropriate bucket (list) 
@@ -67,12 +67,3 @@ def PercentageOfEmpty(H):
         
             
 
-#H = HashTableC(11)
-#A = ['data','structures','computer','science','university','of','texas','at','el','paso']
-#for a in A:
-#    InsertC(H,a,len(a))
-#    print(H.item)
-#
-#for a in A: # Prints bucket, position in bucket, and word length
-#    print(a,FindC(H,a))
- 
