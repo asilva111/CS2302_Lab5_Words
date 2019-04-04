@@ -47,10 +47,10 @@ def EnlargeC(H):
 
 
 def LoadFactor(H):
-    if H.num_items == 0:
+    if H.num_size == 0:
         return 0
     else:
-        return H.num_items / len(H.item) 
+        return H.num_size / len(H.item) 
     
     
     
@@ -63,7 +63,7 @@ def PercentageOfEmpty(H):
             if len(H.item[i]) == 0:
                 EmptyCounter += 1
         
-        return 
+        return (EmptyCounter * 100) / len(H.item)
         
             
 
